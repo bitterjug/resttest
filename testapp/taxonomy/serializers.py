@@ -2,13 +2,11 @@ from rest_framework import serializers
 from taxonomy.models import Taxonomy, Term
 
 
-class TaxonomySerializer(serializers.Serializer):
+class TaxonomySerializer(serializers.ModelSerializer):
     class Meta:
         model = Taxonomy
-        fields = ('id', 'name')
 
 
-class TermSerializer(serializers.Serializer):
+class TermSerializer(serializers.ModelSerializer):
     class Meta:
         model = Term
-        fields = ('id', 'name', 'taxonomy')

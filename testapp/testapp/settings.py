@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -23,6 +22,8 @@ SECRET_KEY = '92r!ushebaygzogvzr(02$52f=z13ioyoeg=ei)gvgc*d2jt0k'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 ALLOWED_HOSTS = []
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'taxonomy',
+    'testapp',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,3 +84,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/mark/workspace/resttest/testapp/static'
